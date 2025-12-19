@@ -8,7 +8,7 @@ public partial class Coin : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             // Gọi hàm tăng điểm (chúng ta sẽ tạo ở bước 2)
-            CoinManager.instance.AddCoin();
+            GameManager.instance.AddCoin();
             
             // Xóa đồng xu sau khi ăn
             Destroy(gameObject);

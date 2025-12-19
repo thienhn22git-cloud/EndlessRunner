@@ -80,6 +80,10 @@ public class Player : MonoBehaviour
     void Die()
     {
         FindObjectOfType<GameManager>().isGameActive = false;
-        Destroy(this.gameObject);
+        if (GameManager.instance != null)
+        {
+            GameManager.instance.ShowGameOver();
+        }
+        gameObject.SetActive(false);
     }
 }
