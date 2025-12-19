@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     public void StartTutorial()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("TutorialScene");
+        SceneManager.LoadScene("Tutorial_Screen_1");
     }
 
     // 3. Xem thông tin tác giả (Credits)
@@ -34,5 +34,17 @@ public class MainMenu : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu"); 
+    }
+
+    public void NextTutorialPage()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Tutorial_Screen_2"); 
+    }
+
+    public void PreviousTutorialPage()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Tutorial_Screen_1"); 
     }
 }
